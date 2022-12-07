@@ -8,7 +8,9 @@ import { blur } from './blurBuyer.js';
 //   console.log('dd', accounts);
 // });
 
-console.log(window.ethereum.selectedAddress);
+window.ethereum.enable().then((res) => {
+  console.log('22', res);
+});
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 console.log(window.ethereum);
